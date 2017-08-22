@@ -71,23 +71,33 @@ $(document).keyup(function(e) {
     console.log(letterGuessed);
     var guessedInArray = currentWord.indexOf(letterGuessed);
     
-if (e.keyCode > 64 && e.keyCode <91 
-    && 
-    lettersTried.indexOf(String.fromCharCode(e.keyCode)) == -1) {
+    if (e.keyCode > 64 && e.keyCode <91 
+        && 
+        lettersTried.indexOf(String.fromCharCode(e.keyCode)) == -1) {
+
         lettersTried.push(String.fromCharCode(e.keyCode));
         lettersTriedPrint.innerHTML = lettersTried;
+
         for (var i = 0; i < currentWord.length; i++) {
             if (guessedInArray === i) {
                 letterVariables[i].style.visibility = "visible";
             }
         };
+
         if (guessedInArray === -1) {
             triesCounter --;
             document.getElementById("tries-counter-print").innerHTML = triesCounter;
-        }
-}
+            if (triesCounter == 0) {
+                alert('Game OVER');
+                location.reload();
+            };
+        };
+    };
+});  
 
-});     
+
+
+
 
 
 
