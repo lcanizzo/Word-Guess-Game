@@ -16,11 +16,42 @@ var currentWord = wordList[Math.floor(Math.random() * wordList.length)];
 
 //Prompt: 'select difficulty' easy 12, medium 8, hard 5
 var triesCounter = 12;
+var triesCounterPrint = document.getElementById("tries-counter-print");
+
+$(function() {
+    $(document).ready(function(e) {
+        var dialog = $('<p>Select Difficulty</p>').dialog({
+            buttons: {
+                "Easy": function() {
+                    alert('You don\'t know us at all, do you?');
+                    triesCounter = 12;
+                    triesCounterPrint.innerHTML = triesCounter;
+                    dialog.dialog('close');
+                },
+                "Medium":  function() {
+                    alert('You got this!');
+                    triesCounter = 8;
+                    triesCounterPrint.innerHTML = triesCounter;
+                    dialog.dialog('close');
+                },
+                "Hard":  function() {
+                    alert('You are a hero.');
+                    triesCounter = 4;
+                    triesCounterPrint.innerHTML = triesCounter;
+                    dialog.dialog('close');
+                }
+            }
+        });
+    });
+});
+
+// var triesCounter = 12;
 
 // console logs
     console.log('wordList', wordList);
     console.log('currentWord', currentWord);
     console.log('currentWord.length', currentWord.length);
+    console.log('triesCounter ', triesCounter);
 
 // Variable for the letter of the current word 
     var one = document.getElementById("one");
@@ -86,7 +117,7 @@ $(document).keyup(function(e) {
 
         if (guessedInArray === -1) {
             triesCounter --;
-            document.getElementById("tries-counter-print").innerHTML = triesCounter;
+            triesCounterPrint.innerHTML = triesCounter;
             if (triesCounter == 0) {
                 alert('Game OVER');
                 location.reload();
