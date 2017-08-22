@@ -1,4 +1,5 @@
 
+// Array of possible words and array of current word letters
 var wordList = new Array (  );
 
 wordList[0] = new Array ( "R", "O", "B","E","R","T");
@@ -8,7 +9,7 @@ wordList[3] = new Array ("C","A","T");
 
 var currentWord = wordList[Math.floor(Math.random() * wordList.length)];
 
-
+// console logs
 console.log(wordList);
 console.log(currentWord);
 
@@ -52,6 +53,36 @@ ten.innerHTML = currentWord[9];
 ten.style.visibility = "hidden";
 eleven.innerHTML = currentWord[10];
 eleven.style.visibility = "hidden";
+
+// logic for input characters
+// window.onkeyup = function() {letterGuess()};
+
+// function letterGuess() {
+//     var x = 
+// }
+// var keypressTest = document.getElementById("keypress-test-box");
+
+// window.addEventListener("keypress", letterGuess);
+
+// function letterGuess() {
+//     if (e.keyCode == 13) {
+//         keypressTest.style.display = "none";
+//     }
+// }
+
+// var event = new Event ("guess");
+
+// window.addEventListener('guess', function (e) {letterGuess ()});
+
+// function onkeyup () {
+//     var event new ev
+// }
+
+
+
+
+
+
 
 
 // Variables for the box containing the bottom-border and the letter
