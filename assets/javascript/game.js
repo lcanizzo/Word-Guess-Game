@@ -21,6 +21,8 @@ var triesCounterPrint = document.getElementById("tries-counter-print");
 $(function() {
     $(document).ready(function(e) {
         var dialog = $('<p>Select Difficulty</p>').dialog({
+            resizable: false,
+            width: 200,
             buttons: {
                 "Easy": function() {
                     alert('You don\'t know us at all, do you?');
@@ -44,8 +46,6 @@ $(function() {
         });
     });
 });
-
-// var triesCounter = 12;
 
 // console logs
     console.log('wordList', wordList);
