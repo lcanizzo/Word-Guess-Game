@@ -1,0 +1,21 @@
+#current-word {
+    text-decoration: underline;
+    clear: both;
+}
+
+.css-test {
+    /* display: none; */
+}
+
+.letter {
+    /* display: none; */
+    border-bottom-style: solid;
+    float:left; 
+    margin-left: 10px;
+    padding: 0;
+}
+
+p {
+    margin: 0;
+    font-size: 20px;
+}
