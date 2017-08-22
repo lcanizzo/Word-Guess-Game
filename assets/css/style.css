@@ -3,12 +3,7 @@
     clear: both;
 }
 
-.css-test {
-    /* display: none; */
-}
-
 .letter {
-    /* display: none; */
     border-bottom-style: solid;
     float:left; 
     margin-left: 10px;
@@ -21,9 +16,3 @@ p {
 }
 
 
-/* 
-.display-none-test {
-    width: 100px;
-    height: 100px;
-    background-color: red;
-} */

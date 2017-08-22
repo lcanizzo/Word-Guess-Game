@@ -1,14 +1,4 @@
 
-// var wordList = ["f i r s t", "s e c o n d", "t h i r d", "f o u r t h", "f i f t h", "s i x t h"];
-
-// var currentWord = wordList[Math.floor(Math.random() * wordList.length)];
-// var currentWordBox = document.getElementById("current-word");
-
-    // currentWordBox.innerHTML = currentWord;
-
-// console.log(currentWord);
-// console.log(wordList);
-
 var wordList = new Array (  );
 
 wordList[0] = new Array ( "R", "O", "B","E","R","T");
@@ -26,7 +16,7 @@ console.log(currentWord[0]);
 console.log(wordList[0]);
 console.log(currentWord.length);
 
-// Variable for the letter of the current word
+// Variable for the letter of the current word 
 var one = document.getElementById("one");
 var two = document.getElementById("two");
 var three = document.getElementById("three");
@@ -39,17 +29,30 @@ var nine = document.getElementById("nine");
 var ten = document.getElementById("ten");
 var eleven = document.getElementById("eleven");
 
+// Placement and Visibility of letter of current word
 one.innerHTML = currentWord[0];
+one.style.visibility = "hidden";
 two.innerHTML = currentWord[1];
+two.style.visibility = "hidden";
 three.innerHTML = currentWord[2];
+three.style.visibility = "hidden";
 four.innerHTML = currentWord[3];
+four.style.visibility = "hidden";
 five.innerHTML = currentWord[4];
+five.style.visibility = "hidden";
 six.innerHTML = currentWord[5];
+six.style.visibility = "hidden";
 seven.innerHTML = currentWord[6];
+seven.style.visibility = "hidden";
 eight.innerHTML = currentWord[7];
+eight.style.visibility = "hidden";
 nine.innerHTML = currentWord[8];
+nine.style.visibility = "hidden";
 ten.innerHTML = currentWord[9];
+ten.style.visibility = "hidden";
 eleven.innerHTML = currentWord[10];
+eleven.style.visibility = "hidden";
+
 
 // Variables for the box containing the bottom-border and the letter
 var first = document.getElementById("first");
@@ -65,7 +68,7 @@ var tenth = document.getElementById("tenth");
 var eleventh = document.getElementById("eleventh");
 
 
-// testing innerHTML changes
+// Logic to remove excess letter-blocks
 if (11-currentWord.length === 8) {
     fourth.style.display = "none";
     fifth.style.display = "none";
@@ -126,7 +129,3 @@ if (11-currentWord.length === 1) {
     eleventh.style.display = "none";    
 }
 
-// var displayNoneTest = 
-// one.innerHTML = "this is a test";
-// var currentWordBox = document.getElementById("current-word");
-// currentWordBox.innerHTML = "testing one two";
