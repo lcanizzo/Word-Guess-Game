@@ -2,10 +2,13 @@
 // Array of possible words and array of current word letters
 var wordList = new Array (  );
 
-wordList[0] = new Array ( "R", "O", "B","E","R","T");
+wordList[0] = new Array ( "W", "Y","B","O");
 wordList[1] = new Array ( "C","A","T","E");
 wordList[2] = new Array ("D","O","G");
 wordList[3] = new Array ("C","A","T");
+wordList[4] = new Array ("J","U","S","T","I","N");
+wordList[5] = new Array ("R","O","B");
+wordList[6] = new Array ("J","O","D","I");
 
 var currentWord = wordList[Math.floor(Math.random() * wordList.length)];
 
