@@ -24,7 +24,9 @@ console.log(currentWord);
 
 console.log(currentWord[0]);
 console.log(wordList[0]);
+console.log(currentWord.length);
 
+// Variable for the letter of the current word
 var one = document.getElementById("one");
 var two = document.getElementById("two");
 var three = document.getElementById("three");
@@ -49,7 +51,82 @@ nine.innerHTML = currentWord[8];
 ten.innerHTML = currentWord[9];
 eleven.innerHTML = currentWord[10];
 
+// Variables for the box containing the bottom-border and the letter
+var first = document.getElementById("first");
+var second = document.getElementById("second");
+var third = document.getElementById("third");
+var fourth = document.getElementById("fourth");
+var fifth = document.getElementById("fifth");
+var sixth = document.getElementById("sixth");
+var seventh = document.getElementById("seventh");
+var eighth = document.getElementById("eighth");
+var nineth = document.getElementById("nineth");
+var tenth = document.getElementById("tenth");
+var eleventh = document.getElementById("eleventh");
+
+
 // testing innerHTML changes
+if (11-currentWord.length === 8) {
+    fourth.style.display = "none";
+    fifth.style.display = "none";
+    sixth.style.display = "none";
+    seventh.style.display = "none";
+    eighth.style.display = "none";
+    nineth.style.display = "none";
+    tenth.style.display = "none";
+    eleventh.style.display = "none";    
+}
+
+if (11-currentWord.length === 7) {
+    fifth.style.display = "none";
+    sixth.style.display = "none";
+    seventh.style.display = "none";
+    eighth.style.display = "none";
+    nineth.style.display = "none";
+    tenth.style.display = "none";
+    eleventh.style.display = "none";    
+}
+
+if (11-currentWord.length === 6) {
+    sixth.style.display = "none";
+    seventh.style.display = "none";
+    eighth.style.display = "none";
+    nineth.style.display = "none";
+    tenth.style.display = "none";
+    eleventh.style.display = "none";    
+}
+
+if (11-currentWord.length === 5) {
+    seventh.style.display = "none";
+    eighth.style.display = "none";
+    nineth.style.display = "none";
+    tenth.style.display = "none";
+    eleventh.style.display = "none";    
+}
+
+if (11-currentWord.length === 4) {
+    eighth.style.display = "none";
+    nineth.style.display = "none";
+    tenth.style.display = "none";
+    eleventh.style.display = "none";    
+}
+
+if (11-currentWord.length === 3) {
+    nineth.style.display = "none";
+    tenth.style.display = "none";
+    eleventh.style.display = "none";    
+}
+
+if (11-currentWord.length === 2) {
+    tenth.style.display = "none";
+    eleventh.style.display = "none";    
+}
+
+if (11-currentWord.length === 1) {
+    eleventh.style.display = "none";    
+}
+
+// var displayNoneTest = 
 // one.innerHTML = "this is a test";
 // var currentWordBox = document.getElementById("current-word");
 // currentWordBox.innerHTML = "testing one two";
