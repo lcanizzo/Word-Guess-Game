@@ -10,12 +10,9 @@ wordList[3] = new Array ("C","A","T");
 var currentWord = wordList[Math.floor(Math.random() * wordList.length)];
 
 // console logs
-console.log(wordList);
-console.log(currentWord);
-
-console.log(currentWord[0]);
-console.log(wordList[0]);
-console.log(currentWord.length);
+console.log('wordList', wordList);
+console.log('currentWord', currentWord);
+console.log('currentWord.length', currentWord.length);
 
 // Variable for the letter of the current word 
 var one = document.getElementById("one");
@@ -54,35 +51,83 @@ ten.style.visibility = "hidden";
 eleven.innerHTML = currentWord[10];
 eleven.style.visibility = "hidden";
 
-// logic for input characters
-// window.onkeyup = function() {letterGuess()};
 
-// function letterGuess() {
-//     var x = 
-// }
-// var keypressTest = document.getElementById("keypress-test-box");
+// Logic for letter guessed
 
-// window.addEventListener("keypress", letterGuess);
+$(document).keydown(function(e) {
+    var letterGuessed = String.fromCharCode(e.keyCode);   
+    // console.log(e.keyCode);         
+    console.log(letterGuessed);
+    var guessedInArray = currentWord.indexOf(letterGuessed);
+     
 
-// function letterGuess() {
-//     if (e.keyCode == 13) {
-//         keypressTest.style.display = "none";
-//     }
-// }
+    // Second "R" in "ROBERT" does not work because it is already the first letter)
+    if (guessedInArray === 0) {
+        one.style.visibility = "visible";
+    }
+    if (guessedInArray === 1) {
+        two.style.visibility = "visible";
+    }
+    if (guessedInArray == 2) {
+        three.style.visibility = "visible";        
+    } 
+    if (guessedInArray == 3) {
+        four.style.visibility = "visible";        
+    } 
+    if (guessedInArray == 4) {
+        five.style.visibility = "visible";        
+    } 
+    if (guessedInArray == 5) {
+        six.style.visibility = "visible";        
+    } 
+    if (guessedInArray == 6) {
+        seven.style.visibility = "visible";        
+    } 
+    if (guessedInArray == 7) {
+        eight.style.visibility = "visible";        
+    } 
+    if (guessedInArray == 8) {
+        nine.style.visibility = "visible";        
+    } 
+    if (guessedInArray == 9) {
+        ten.style.visibility = "visible";        
+    } 
+    if (guessedInArray == 10) {
+        eleven.style.visibility = "visible";        
+    } 
 
-// var event = new Event ("guess");
+});      
 
-// window.addEventListener('guess', function (e) {letterGuess ()});
+ // Key Press Tests
+            var keypressTest = document.getElementById("keypress-test-box");
 
-// function onkeyup () {
-//     var event new ev
-// }
+                // if (guessedInArray !== -1) {
+                //     keypressTest.style.display = "none";
+                // }
 
-
-
-
-
-
+                // if (guessedInArray == 0) {
+                //     one.style.visibility = "visible";        
+                // } else if (guessedInArray == 1) {
+                //     two.style.visibility = "visible";        
+                // } else if (guessedInArray == 2) {
+                //     three.style.visibility = "visible";        
+                // } else if (guessedInArray == 3) {
+                //     four.style.visibility = "visible";        
+                // } else if (guessedInArray == 4) {
+                //     five.style.visibility = "visible";        
+                // } else if (guessedInArray == 5) {
+                //     six.style.visibility = "visible";        
+                // } else if (guessedInArray == 6) {
+                //     seven.style.visibility = "visible";        
+                // } else if (guessedInArray == 7) {
+                //     eight.style.visibility = "visible";        
+                // } else if (guessedInArray == 8) {
+                //     nine.style.visibility = "visible";        
+                // } else if (guessedInArray == 9) {
+                //     ten.style.visibility = "visible";        
+                // } else if (guessedInArray == 10) {
+                //     eleven.style.visibility = "visible";        
+                // } 
 
 
 // Variables for the box containing the bottom-border and the letter
