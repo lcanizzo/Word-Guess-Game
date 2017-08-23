@@ -88,11 +88,13 @@ var letterVariables = [one, two, three, four, five, six, seven, eight, nine, ten
     eleven.style.visibility = "hidden";
 
 
-// Logic for letter guessed, Win, Lose
+// Logic for Correct Letter, Incorrect Letter, Invalid Choice, Win, Lose
 var lettersTried = [];
+var lettersTriedSpaced = lettersTried.join("  ");
 var lettersTriedPrint = document.getElementById("letters-tried-print")
 var correctCounter = 0;
-
+var winsCounter = 0;
+console.log('lettersTriedSpaced: ', lettersTriedSpaced)
 
 $(document).keyup(function(e) {
     var letterGuessed = String.fromCharCode(e.keyCode);   
@@ -104,7 +106,7 @@ $(document).keyup(function(e) {
         lettersTried.indexOf(String.fromCharCode(e.keyCode)) == -1) {
 
         lettersTried.push(String.fromCharCode(e.keyCode));
-        lettersTriedPrint.innerHTML = lettersTried;
+        lettersTriedPrint.innerHTML = lettersTried.join(" . ");
 
         for (var i = 0; i < currentWord.length; i++) {
             if (guessedInArray === i) {
@@ -115,6 +117,8 @@ $(document).keyup(function(e) {
                     &&
                     correctCounter == currentWord.length) {
                     alert(currentWord.join("") + ", you got it!");
+                    winsCounter ++;
+                    document.getElementById("wins-counter").innerHTML = winsCounter;
                 }
             }
         };
