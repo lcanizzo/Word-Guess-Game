@@ -11,42 +11,38 @@ var wordList = new Array (  );
 
 var currentWord = wordList[Math.floor(Math.random() * wordList.length)];
 
-// Counters for Wins and for Tries Remaining
-
-
-//Prompt: 'select difficulty' easy 12, medium 8, hard 5
-var triesCounter = 12;
-var triesCounterPrint = document.getElementById("tries-counter-print");
-
-$(function() {
-    $(document).ready(function(e) {
-        var dialog = $('<p>Select Difficulty</p>').dialog({
-            resizable: false,
-            width: 200,
-            buttons: {
-                "Easy": function() {
-                    alert('You don\'t know us at all, do you?');
-                    triesCounter = 12;
-                    triesCounterPrint.innerHTML = triesCounter;
-                    dialog.dialog('close');
-                },
-                "Medium":  function() {
-                    alert('You got this!');
-                    triesCounter = 8;
-                    triesCounterPrint.innerHTML = triesCounter;
-                    dialog.dialog('close');
-                },
-                "Hard":  function() {
-                    alert('You are a hero.');
-                    triesCounter = 4;
-                    triesCounterPrint.innerHTML = triesCounter;
-                    dialog.dialog('close');
+// Counters for Tries Remaining
+    $(function() {
+        $(document).ready(function(e) {
+            var dialog = $('<p>Select Difficulty</p>').dialog({
+                resizable: false,
+                width: 200,
+                buttons: {
+                    "Easy": function() {
+                        alert('You don\'t know us at all, do you?');
+                        triesCounter = 12;
+                        triesCounterPrint.innerHTML = triesCounter;
+                        dialog.dialog('close');
+                    },
+                    "Medium":  function() {
+                        alert('You got this!');
+                        triesCounter = 8;
+                        triesCounterPrint.innerHTML = triesCounter;
+                        dialog.dialog('close');
+                    },
+                    "Hard":  function() {
+                        alert('You are a hero.');
+                        triesCounter = 4;
+                        triesCounterPrint.innerHTML = triesCounter;
+                        dialog.dialog('close');
+                    }
                 }
-            }
+            });
         });
     });
-});
 
+var triesCounter = 12;
+var triesCounterPrint = document.getElementById("tries-counter-print");
 // console logs
     console.log('wordList', wordList);
     console.log('currentWord', currentWord);
@@ -92,13 +88,14 @@ var letterVariables = [one, two, three, four, five, six, seven, eight, nine, ten
     eleven.style.visibility = "hidden";
 
 
-// Logic for letter guessed
+// Logic for letter guessed, Win, Lose
 var lettersTried = [];
 var lettersTriedPrint = document.getElementById("letters-tried-print")
+var correctCounter = 0;
+
 
 $(document).keyup(function(e) {
     var letterGuessed = String.fromCharCode(e.keyCode);   
-    // console.log(e.keyCode);         
     console.log(letterGuessed);
     var guessedInArray = currentWord.indexOf(letterGuessed);
     
@@ -112,6 +109,13 @@ $(document).keyup(function(e) {
         for (var i = 0; i < currentWord.length; i++) {
             if (guessedInArray === i) {
                 letterVariables[i].style.visibility = "visible";
+                correctCounter ++;
+                console.log('correctCounter ', correctCounter);
+                if (triesCounter > 0
+                    &&
+                    correctCounter == currentWord.length) {
+                    alert(currentWord.join("") + ", you got it!");
+                }
             }
         };
 
@@ -125,10 +129,6 @@ $(document).keyup(function(e) {
         };
     };
 });  
-
-
-
-
 
 
 
@@ -149,7 +149,7 @@ var letterBoxes = [first, second, third, fourth, fifth, sixth, seventh, eighth, 
 
 // Logic to remove excess letter-blocks
 
-for (var d = 0; d < currentWord.length; d++) {
-    letterBoxes[d].style.display = "inline"
-}
+    for (var d = 0; d < currentWord.length; d++) {
+        letterBoxes[d].style.display = "inline"
+    }
 
