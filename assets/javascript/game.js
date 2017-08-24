@@ -22,8 +22,7 @@ var lettersTried = [];
     wordList[11] = new Array("J", "U", "S", "T","I","N");
     wordList[12] = new Array("B", "R", "Y", "A", "N");
     wordList[13] = new Array("M", "A", "R", "I","O");
-    wordList[14] = new Array("M", "A", "K", "S","Y","M");
-    wordList[15] = new Array("J", "U", "L","I", "A");
+    wordList[14] = new Array("J", "U", "L","I", "A");
 
 // start annoying block of Justin's    
     // wordList[16] = new Array("J", "U", "S", "T","I","N");
