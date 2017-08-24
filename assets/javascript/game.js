@@ -26,26 +26,26 @@ var lettersTried = [];
     wordList[15] = new Array("J", "U", "L","I", "A");
 
 // start annoying block of Justin's    
-    wordList[16] = new Array("J", "U", "S", "T","I","N");
-    wordList[17] = new Array("J", "U", "S", "T","I","N");
-    wordList[18] = new Array("J", "U", "S", "T","I","N");
-    wordList[19] = new Array("J", "U", "S", "T","I","N");
-    wordList[20] = new Array("J", "U", "S", "T","I","N");
-    wordList[21] = new Array("J", "U", "S", "T","I","N");
-    wordList[22] = new Array("J", "U", "S", "T","I","N");
-    wordList[23] = new Array("J", "U", "S", "T","I","N");
-    wordList[24] = new Array("J", "U", "S", "T","I","N");
-    wordList[25] = new Array("J", "U", "S", "T","I","N");
-    wordList[26] = new Array("J", "U", "S", "T","I","N");
-    wordList[27] = new Array("J", "U", "S", "T","I","N");
-    wordList[28] = new Array("J", "U", "S", "T","I","N");
-    wordList[29] = new Array("J", "U", "S", "T","I","N");
-    wordList[30] = new Array("J", "U", "S", "T","I","N");
-    wordList[31] = new Array("J", "U", "S", "T","I","N");
-    wordList[32] = new Array("J", "U", "S", "T","I","N");
-    wordList[33] = new Array("J", "U", "S", "T","I","N");
-    wordList[34] = new Array("J", "U", "S", "T","I","N");
-    wordList[35] = new Array("J", "U", "S", "T","I","N");
+    // wordList[16] = new Array("J", "U", "S", "T","I","N");
+    // wordList[17] = new Array("J", "U", "S", "T","I","N");
+    // wordList[18] = new Array("J", "U", "S", "T","I","N");
+    // wordList[19] = new Array("J", "U", "S", "T","I","N");
+    // wordList[20] = new Array("J", "U", "S", "T","I","N");
+    // wordList[21] = new Array("J", "U", "S", "T","I","N");
+    // wordList[22] = new Array("J", "U", "S", "T","I","N");
+    // wordList[23] = new Array("J", "U", "S", "T","I","N");
+    // wordList[24] = new Array("J", "U", "S", "T","I","N");
+    // wordList[25] = new Array("J", "U", "S", "T","I","N");
+    // wordList[26] = new Array("J", "U", "S", "T","I","N");
+    // wordList[27] = new Array("J", "U", "S", "T","I","N");
+    // wordList[28] = new Array("J", "U", "S", "T","I","N");
+    // wordList[29] = new Array("J", "U", "S", "T","I","N");
+    // wordList[30] = new Array("J", "U", "S", "T","I","N");
+    // wordList[31] = new Array("J", "U", "S", "T","I","N");
+    // wordList[32] = new Array("J", "U", "S", "T","I","N");
+    // wordList[33] = new Array("J", "U", "S", "T","I","N");
+    // wordList[34] = new Array("J", "U", "S", "T","I","N");
+    // wordList[35] = new Array("J", "U", "S", "T","I","N");
     
     
 console.log('wordList: ', wordList);
@@ -159,12 +159,6 @@ function setDifficulty() {
     ten.style.visibility = "hidden";
     eleven.innerHTML = currentWord[10];
     eleven.style.visibility = "hidden";
-
-
-
-// console logs
-    // console.log('wordList', wordList);
-    // console.log('currentWord.length', currentWord.length);
 
 //Correct Letter, Incorrect Letter, Invalid Choice, Win, Lose
 $(document).keyup(function (e) {
