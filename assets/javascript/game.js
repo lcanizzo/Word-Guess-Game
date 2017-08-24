@@ -261,7 +261,7 @@ $(document).keyup(function (e) {
             triesCounter --;
             triesCounterPrint.innerHTML = triesCounter;
             if (triesCounter == 0) {
-                alert('Game OVER');
+                alert('Game OVER! Correct answer: ', currentWord.join(""));
                 location.reload();
             };
         };
